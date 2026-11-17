@@ -481,7 +481,9 @@ html:not(.js) .picks__group { display: none; }
 /* skills rocket */
 .skills-panel { position: relative; }
 .skills__head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.launch { position: absolute; right: 0; bottom: 0; width: 100px; height: 100%; pointer-events: none; z-index: 3; }
+.launch { position: fixed; z-index: 1; pointer-events: none; overflow: hidden; display: none;
+  top: 0; bottom: var(--route-h, 74px); width: 280px; right: calc(max(0px, (100vw - 1240px) / 2) - 70px); }
+body.on-skills .launch { display: block; }
 .launch__pad { position: absolute; left: 50%; bottom: 0; width: 92px; height: 8px; margin-left: -46px; border-radius: 3px; background: linear-gradient(90deg, #3A4A68, #6C7D9E, #3A4A68); opacity: .9; }
 .launch__pad::before, .launch__pad::after { content: ""; position: absolute; bottom: 8px; width: 4px; height: 70px; background: repeating-linear-gradient(0deg, #4B5B7A 0 6px, transparent 6px 10px); border-left: 1px solid #6C7D9E; border-right: 1px solid #6C7D9E; }
 .launch__pad::before { left: 8px; } .launch__pad::after { right: 8px; }
@@ -523,7 +525,7 @@ html, body { overflow-x: clip; }
   .proj__grid, .pose__row { grid-template-columns: minmax(0, 1fr); }
   .pose__angles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .skills-panel .skills { margin-right: 0; }
-  .launch { position: fixed; right: 4px; bottom: 76px; width: 90px; height: 200px; opacity: 0; transition: opacity .3s; }
+  .launch { right: -60px; width: 200px; opacity: 0; transition: opacity .3s; }
   .is-counting .launch, .is-launching .launch { opacity: 1; }
   .hbar { grid-template-columns: minmax(0, 110px) minmax(0, 1fr) 48px; }
 }

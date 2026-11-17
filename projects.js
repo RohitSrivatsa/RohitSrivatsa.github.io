@@ -260,20 +260,20 @@
 
   /* ---------- rocket launch on the Skills tab ---------- */
   var panel = document.getElementById('skills'), relaunch = document.getElementById('relaunch');
-  var count = panel && panel.querySelector('.launch__count'), timers = [];
+  var count = document.querySelector('.launch__count'), timers = [], body = document.body;
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function launch() {
     if (!panel || reduce) return;
     timers.forEach(clearTimeout); timers = [];
-    panel.classList.remove('is-launching', 'is-lit');
+    panel.classList.remove('is-launching', 'is-lit'); body.classList.remove('is-launching', 'is-counting');
     void panel.offsetWidth;
-    panel.classList.add('is-counting');
+    panel.classList.add('is-counting'); body.classList.add('is-counting');
     ['3', '2', '1', 'Liftoff'].forEach(function (t, i) {
       timers.push(setTimeout(function () { count.textContent = t; count.classList.remove('tick'); void count.offsetWidth; count.classList.add('tick'); }, i * 420));
     });
-    timers.push(setTimeout(function () { panel.classList.add('is-launching'); }, 1260));
+    timers.push(setTimeout(function () { panel.classList.add('is-launching'); body.classList.add('is-launching'); }, 1260));
     timers.push(setTimeout(function () { panel.classList.add('is-lit'); }, 1700));
-    timers.push(setTimeout(function () { panel.classList.remove('is-counting'); count.textContent = ''; }, 2300));
+    timers.push(setTimeout(function () { panel.classList.remove('is-counting'); body.classList.remove('is-counting'); count.textContent = ''; }, 2300));
   }
 
   /* ---------- skills: "where I used this" ---------- */
@@ -366,6 +366,13 @@
       tip.classList.toggle('is-above', top < r.top - host.top);
     }
   }
-  window.addEventListener('deck:tab', function (e) { if (e.detail.index === 3) launch(); });
+  window.addEventListener('deck:tab', function (e) {
+    var on = e.detail.index === 3;
+    body.classList.toggle('on-skills', on);
+    if (!on) { timers.forEach(clearTimeout); timers = []; body.classList.remove('is-launching', 'is-counting'); if (count) count.textContent = ''; }
+    if (on) launch();
+  });
+  function routeH() { var r = document.querySelector('.route'); if (r) document.documentElement.style.setProperty('--route-h', r.offsetHeight + 'px'); }
+  routeH(); window.addEventListener('resize', routeH);
   if (relaunch) relaunch.addEventListener('click', launch);
 })();
