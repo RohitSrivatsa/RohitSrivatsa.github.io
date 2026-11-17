@@ -301,7 +301,7 @@
     'c-py': ['Programming with Python', 'Certification', 'education'],
     'c-pyds': ['Python Data Structures', 'Certification', 'education'],
     'c-devops': ['Introduction to DevOps', 'Certification', 'education'],
-    'e-bsc': ['BSc in Computer Science, Dayananda Sagar College of Engineering', 'Education', 'education'],
+    'e-bsc': ['BTech in Computer Science, Dayananda Sagar College of Engineering', 'Education', 'education'],
     'e-msc': ['Masters in Applied Computer Science, St Francis Xavier University', 'Education', 'education'],
     'self': ['Learned on my own, hands-on', 'Self-taught', null]
   };
