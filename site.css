@@ -599,3 +599,19 @@ html, body { overflow-x: clip; }
 @media (max-width: 959px) { .mode { margin-left: auto; } .bar .cta { margin-left: 0; } }
 :root[data-mode="light"] .picks button[aria-pressed="true"] { background: rgb(255 255 255 / 0.94); box-shadow: 0 12px 30px rgb(24 52 100 / 0.14); }
 :root[data-mode="light"] .seg { background: rgb(255 255 255 / 0.6); }
+/* compact experience list (eight roles in three groups) */
+@media (min-width: 960px) {
+  #experience .split__side { gap: 10px; }
+  #experience .picks { gap: 5px; }
+  #experience .picks__group + .picks { margin-top: -4px; }
+  #experience .picks button { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "t d" "o o"; column-gap: 10px; row-gap: 1px; padding: 8px 12px; }
+  #experience .picks button b { grid-area: t; font-size: 13.5px; line-height: 1.25; }
+  #experience .picks button span { grid-area: o; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #experience .picks button time { grid-area: d; align-self: center; font-size: 10px; white-space: nowrap; }
+  #experience .split__side { flex-basis: 330px; }
+}
+@media (min-width: 960px) and (max-height: 960px) {
+  #experience .split__side h2 { font-size: 24px; }
+  #experience .picks button { padding: 6px 11px; }
+  #experience .picks button span { display: none; }
+}
