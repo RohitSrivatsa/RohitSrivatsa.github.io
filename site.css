@@ -617,3 +617,45 @@ html, body { overflow-x: clip; }
   #experience .picks button { padding: 6px 11px; }
   #experience .picks button span { display: none; }
 }
+
+/* featured: current role */
+.live { display: inline-flex; align-items: center; gap: 6px; font: 600 10px/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; font-style: normal;
+  color: var(--amber-ink); background: var(--amber); padding: 4px 8px 4px 7px; border-radius: 999px; vertical-align: 1px; }
+.live i { width: 6px; height: 6px; border-radius: 50%; background: var(--amber-ink); animation: livepulse 1.6s ease-in-out infinite; }
+@keyframes livepulse { 50% { opacity: .25; } }
+.eyebrow .live { margin-right: 8px; }
+.picks button.pick--featured { position: relative; border-color: rgb(var(--amber-rgb) / 0.55); background: linear-gradient(135deg, rgb(var(--amber-rgb) / 0.16), rgb(var(--amber-rgb) / 0.04)); box-shadow: 0 0 0 1px rgb(var(--amber-rgb) / 0.15), 0 10px 30px rgb(var(--amber-rgb) / 0.12); }
+.picks button.pick--featured b { font-size: 16px; }
+.picks button.pick--featured .live { justify-self: start; margin-top: 4px; }
+#experience .picks button.pick--featured { grid-template-areas: "t d" "o o" "l l"; padding: 11px 13px; }
+#experience .picks button.pick--featured b { font-size: 15.5px; }
+#experience .picks button.pick--featured span { display: block; }
+#experience .picks button.pick--featured .live { grid-area: l; display: inline-flex; }
+.card--featured { border-color: transparent; }
+.card--featured::before { padding: 1.5px; background: linear-gradient(135deg, var(--amber), rgb(var(--amber-rgb) / 0.25) 35%, rgb(var(--slate-rgb) / 0.15) 70%, rgb(var(--amber-rgb) / 0.6)); }
+.card.card--featured { box-shadow: 0 24px 60px rgb(var(--shadow-rgb) / 0.4), 0 0 50px rgb(var(--amber-rgb) / 0.12), inset 0 1px 0 var(--card-hl); }
+.card--featured h3 { font-size: 21px; }
+.featured__sub { color: var(--ink-soft); font-size: 14px; }
+.featured__facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-bottom: 16px; }
+.featured__facts li { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 10px; padding: 10px 12px; border-radius: 10px;
+  background: rgb(var(--amber-rgb) / 0.08); border: 1px solid rgb(var(--amber-rgb) / 0.22); }
+.featured__facts b { font: 700 26px/1 var(--f-display); color: var(--accent); }
+.featured__facts span { font-size: 12.5px; line-height: 1.35; color: var(--ink-soft); }
+@media (max-width: 720px) { .featured__facts { grid-template-columns: minmax(0, 1fr); } }
+@media (min-width: 960px) and (max-height: 720px) { .featured__facts li { padding: 7px 10px; } .featured__facts b { font-size: 22px; } .featured__facts { margin-bottom: 10px; } .card--featured .bullets { gap: 6px; } }
+@media (min-width: 960px) and (max-height: 760px) {
+  .featured__sub { display: none; }
+  #experience .picks button.pick--featured span { display: none; }
+  #experience .picks button.pick--featured { grid-template-areas: "t d" "l l"; padding: 8px 12px; }
+  .card--featured { padding-block: 16px; }
+  .card--featured > header { margin-bottom: 10px; }
+  .card--featured .bullets li { font-size: 14px; line-height: 1.45; }
+  .featured__facts span { font-size: 12px; }
+}
+@media (min-width: 960px) and (max-height: 640px) {
+  .featured__facts { display: none; }
+}
+@media (min-width: 960px) and (max-height: 700px) {
+  #experience .picks button.pick--featured .live { display: none; }
+  #experience .picks button.pick--featured { grid-template-areas: "t d"; }
+}
