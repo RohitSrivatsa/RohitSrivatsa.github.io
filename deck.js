@@ -214,7 +214,7 @@
     else if (e.key === 'ArrowLeft') { show((current - 1 + n) % n, { focusTab: onTab }); e.preventDefault(); }
     else if (onTab && e.key === 'Home') { show(0, { focusTab: true }); e.preventDefault(); }
     else if (onTab && e.key === 'End') { show(n - 1, { focusTab: true }); e.preventDefault(); }
-    else if (/^[1-6]$/.test(e.key)) { show(+e.key - 1, { focusTab: onTab }); }
+    else if (/^[1-9]$/.test(e.key) && +e.key <= ids.length) { show(+e.key - 1, { focusTab: onTab }); }
   });
 
   /* master / detail pickers */

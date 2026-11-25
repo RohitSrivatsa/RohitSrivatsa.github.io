@@ -39,7 +39,8 @@
     <a role="tab" id="t-projects" href="#projects" aria-controls="projects"><i>03</i>Projects</a>
     <a role="tab" id="t-skills" href="#skills" aria-controls="skills"><i>04</i>Skills</a>
     <a role="tab" id="t-education" href="#education" aria-controls="education"><i>05</i>Education</a>
-    <a role="tab" id="t-contact" href="#contact" aria-controls="contact"><i>06</i>Contact</a>
+    <a role="tab" id="t-offduty" href="#offduty" aria-controls="offduty"><i>06</i>Off Duty</a>
+    <a role="tab" id="t-contact" href="#contact" aria-controls="contact"><i>07</i>Contact</a>
   </nav>
   <button type="button" class="mode" id="mode" aria-label="Switch to light mode" title="Light or dark mode">
     <svg class="mode__sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
@@ -464,7 +465,212 @@
     </div>
   </section>
 
-  <!-- 06 CONTACT -->
+  <!-- 06 OFF DUTY -->
+  <section class="panel offduty" id="offduty" role="tabpanel" aria-labelledby="t-offduty" tabindex="-1" data-picker>
+    <div class="offduty__body">
+      <div class="split__side">
+        <div class="offduty__head">
+          <p class="eyebrow">Layover mode</p>
+          <h2>Off Duty</h2>
+          <p class="offduty__sub">The person behind the work.</p>
+        </div>
+        <ul class="picks od-picks" data-rise>
+          <li><button type="button" data-pick="od-route"><b>Flight path</b><span>Rain, heat, snow</span></button></li>
+          <li><button type="button" data-pick="od-panel"><b>Switch panel</b><span>Flip my interests on</span></button></li>
+          <li><button type="button" data-pick="od-hangar"><b>The hangar</b><span>Dream machines</span></button></li>
+          <li><button type="button" data-pick="od-board"><b>Departures</b><span>The bucket list</span></button></li>
+          <li><button type="button" data-pick="od-box"><b>Black box</b><span class="classified">Classified</span></button></li>
+        </ul>
+      </div>
+      <div class="split__main">
+
+        <article id="od-route" class="card od-card">
+          <header><p class="eyebrow">Climate-tested · three homes, three extremes</p><h3>Flight path</h3></header>
+          <div class="route-map">
+            <svg class="chart-map" viewBox="0 0 760 300" role="img" aria-label="Chart showing the route from Bengaluru to Dubai to Antigonish, Canada">
+              <g class="chart-map__grid"></g>
+              <path class="chart-map__leg chart-map__leg--1" d="M695 244 Q 668 200 613 192"/>
+              <path class="chart-map__leg chart-map__leg--2" d="M613 192 Q 400 -10 178 105"/>
+              <g class="chart-map__dots"></g>
+              <g class="chart-map__plane"><path d="M14 0 4 -2 0 -11h-3l2 9-6 1-2-3h-2l1 4-1 4h2l2-3 6 1-2 9h3l4-9 10-2z"/></g>
+            </svg>
+            <div class="wx" aria-hidden="true"></div>
+          </div>
+          <div class="stops" role="group" aria-label="Choose a stop">
+            <button type="button" class="stop" data-stop="0" aria-pressed="true"><b>BLR</b><span>Bengaluru</span><em>Born</em></button>
+            <button type="button" class="stop" data-stop="1" aria-pressed="false"><b>DXB</b><span>Dubai</span><em>2006–2016</em></button>
+            <button type="button" class="stop" data-stop="2" aria-pressed="false"><b>YHZ</b><span>Nova Scotia</span><em>2023–now</em></button>
+          </div>
+          <div class="stop-info" aria-live="polite">
+            <div class="gauge"><span class="gauge__fill"></span><span class="gauge__label"></span></div>
+            <div class="stop-info__text"><p class="stop-info__title"></p><p class="stop-info__body"></p></div>
+          </div>
+          <div class="passport">
+            <p class="passport__label">Passport · <b>9</b> countries stamped</p>
+            <ul class="stamps"><li><button type="button" class="stamp stamp--0" title="France"><b>FR</b><span>France</span></button></li><li><button type="button" class="stamp stamp--1" title="Switzerland"><b>CH</b><span>Switzerland</span></button></li><li><button type="button" class="stamp stamp--2" title="Italy"><b>IT</b><span>Italy</span></button></li><li><button type="button" class="stamp stamp--3" title="UAE"><b>AE</b><span>UAE</span></button></li><li><button type="button" class="stamp stamp--0" title="Canada"><b>CA</b><span>Canada</span></button></li><li><button type="button" class="stamp stamp--1" title="United States"><b>US</b><span>United States</span></button></li><li><button type="button" class="stamp stamp--2" title="Qatar"><b>QA</b><span>Qatar</span></button></li><li><button type="button" class="stamp stamp--3" title="Saudi Arabia"><b>SA</b><span>Saudi Arabia</span></button></li><li><button type="button" class="stamp stamp--0" title="India"><b>IN</b><span>India</span></button></li></ul>
+          </div>
+        </article>
+
+        <article id="od-panel" class="card od-card">
+          <header><p class="eyebrow">Overhead panel · flip a switch to learn something</p><h3>Switch panel</h3></header>
+          <div class="ovh">
+            <div class="ovh__switches">
+              <button type="button" class="sw" data-fact="Boeing 777 fan, with 250 hours on Flight Simulator X." aria-pressed="false"><span class="sw__lamp"></span><span class="sw__toggle"><i></i></span><span class="sw__label">Aviation</span></button>
+              <button type="button" class="sw" data-fact="Dream garage, bay one: Porsche 911 Turbo." aria-pressed="false"><span class="sw__lamp"></span><span class="sw__toggle"><i></i></span><span class="sw__label">Cars</span></button>
+              <button type="button" class="sw" data-fact="Dream bike: Triumph Tiger. Dream road: the Himalayas." aria-pressed="false"><span class="sw__lamp"></span><span class="sw__toggle"><i></i></span><span class="sw__label">Bikes</span></button>
+              <button type="button" class="sw" data-fact="Favourite ship: the Black Pearl." aria-pressed="false"><span class="sw__lamp"></span><span class="sw__toggle"><i></i></span><span class="sw__label">Ships</span></button>
+              <button type="button" class="sw" data-fact="Red Bull Racing. Max Verstappen." aria-pressed="false"><span class="sw__lamp"></span><span class="sw__toggle"><i></i></span><span class="sw__label">F1</span></button>
+              <button type="button" class="sw" data-fact="Valentino Rossi. Forever number 46." aria-pressed="false"><span class="sw__lamp"></span><span class="sw__toggle"><i></i></span><span class="sw__label">MotoGP</span></button>
+              <button type="button" class="sw" data-fact="RCB and India from the stands, and cricket on the pitch too." aria-pressed="false"><span class="sw__lamp"></span><span class="sw__toggle"><i></i></span><span class="sw__label">Cricket</span></button>
+              <button type="button" class="sw" data-fact="Messi, Barcelona and Man City." aria-pressed="false"><span class="sw__lamp"></span><span class="sw__toggle"><i></i></span><span class="sw__label">Football</span></button>
+              <button type="button" class="sw" data-fact="Nine countries stamped so far, and counting." aria-pressed="false"><span class="sw__lamp"></span><span class="sw__toggle"><i></i></span><span class="sw__label">Travel</span></button>
+              <button type="button" class="sw" data-fact="Builds things for fun. This site included." aria-pressed="false"><span class="sw__lamp"></span><span class="sw__toggle"><i></i></span><span class="sw__label">Coding</span></button>
+              <button type="button" class="sw" data-fact="Reads market charts for fun." aria-pressed="false"><span class="sw__lamp"></span><span class="sw__toggle"><i></i></span><span class="sw__label">Trading</span></button>
+              <button type="button" class="sw" data-fact="Call of Duty. Next on the list: Red Dead Redemption 2." aria-pressed="false"><span class="sw__lamp"></span><span class="sw__toggle"><i></i></span><span class="sw__label">Gaming</span></button>
+              <button type="button" class="sw" data-fact="Gym, running, tennis, pickleball and cricket." aria-pressed="false"><span class="sw__lamp"></span><span class="sw__toggle"><i></i></span><span class="sw__label">Fitness</span></button>
+              <button type="button" class="sw" data-fact="Signature dish: pasta." aria-pressed="false"><span class="sw__lamp"></span><span class="sw__toggle"><i></i></span><span class="sw__label">Cooking</span></button>
+            </div>
+            <div class="ovh__display" aria-live="polite">
+              <p class="ovh__count"><span id="sw-count">0</span> / 14 systems on</p>
+              <p class="ovh__fact">All switches are off. Flip one.</p>
+              <button type="button" class="btn btn--ghost ovh__master" id="sw-master">Master switch: all on</button>
+            </div>
+          </div>
+          <div class="motto" aria-live="polite" hidden>
+            <p class="motto__k">All systems go · captain's motto</p>
+            <p class="motto__v">One life, go all in, enjoy everything and every moment, be happy and stay peaceful.</p>
+          </div>
+        </article>
+
+        <article id="od-hangar" class="card od-card">
+          <header><p class="eyebrow">Hangar · dream machines</p><h3>The hangar</h3></header>
+          <div class="hangar">
+            <div class="hangar__doors" aria-hidden="true"><i></i><i></i></div>
+            <div class="hangar__bays">
+              <figure class="bay is-on" data-bay="0">
+                <svg viewBox="0 0 420 170" class="art art--777" aria-hidden="true">
+                  <ellipse cx="210" cy="150" rx="190" ry="7" class="art__shadow"/>
+                  <path class="art__accent" d="M48 82 18 30h26l44 48z"/>
+                  <path class="art__body" d="M30 86c6-10 30-14 70-14h230c30 0 52 6 62 14 3 3 3 6 0 8-10 8-32 12-62 12H100c-44 0-64-6-70-20z"/>
+                  <path class="art__belly" d="M30 86c12 12 32 20 70 20h230c30 0 52-4 62-12-12 6-32 9-62 9H100c-38 0-58-6-70-17z"/>
+                  <path class="art__wing" d="M210 98 150 140h22l78-38z"/>
+                  <path class="art__wing" d="M52 90 20 102h16l40-8z"/>
+                  <rect x="166" y="104" width="54" height="24" rx="12" class="art__engine"/>
+                  <ellipse cx="219" cy="116" rx="5" ry="11" class="art__intake"/>
+                  <path d="M120 82h230" class="art__windows"/>
+                  <path d="M352 80c8 0 18 2 24 6l-26-1z" class="art__glass"/>
+                  <path d="M40 88h332" class="art__stripe"/>
+                  <g class="art__gear"><circle cx="196" cy="136" r="5"/><circle cx="208" cy="136" r="5"/><circle cx="220" cy="136" r="5"/><circle cx="352" cy="134" r="4"/><path d="M208 112v20M352 106v24"/></g>
+                </svg>
+                <figcaption>
+                  <p class="plate__k">Favourite aircraft</p><p class="plate__v">Boeing 777</p>
+                  <dl class="plate">
+                    <div><dt>Sim logbook</dt><dd>250 hrs · Flight Simulator X</dd></div>
+                    <div><dt>First real flight</dt><dd>Emirates, to Dubai</dd></div>
+                  </dl>
+                </figcaption>
+              </figure>
+              <figure class="bay" data-bay="1">
+                <svg viewBox="0 0 420 170" class="art art--911" aria-hidden="true">
+                  <ellipse cx="214" cy="148" rx="172" ry="7" class="art__shadow"/>
+                  <path class="art__body" d="M50 130c-3-12 1-22 16-26l84-12c22-22 40-32 64-34 48-2 98 18 138 38 14 7 20 16 20 28l-2 6z"/>
+                  <path class="art__glass" d="M162 90c18-18 34-26 52-27 30-1 58 9 84 25z"/>
+                  <path d="M232 64v26" class="art__pillar"/>
+                  <path class="art__accent" d="M328 84l44 3 6 9-42-2z"/>
+                  <path class="art__vent" d="M276 104l26 2-3 8-24-2z"/>
+                  <path d="M62 116h300" class="art__stripe"/>
+                  <ellipse cx="74" cy="104" rx="9" ry="6" class="art__lamp"/>
+                  <circle cx="118" cy="128" r="22" class="art__tyre"/><circle cx="118" cy="128" r="11" class="art__rim"/>
+                  <circle cx="318" cy="128" r="23" class="art__tyre"/><circle cx="318" cy="128" r="11.5" class="art__rim"/>
+                </svg>
+                <figcaption><p class="plate__k">Dream car</p><p class="plate__v">Porsche 911 Turbo</p>
+                  <dl class="plate"><div><dt>Layout</dt><dd>Rear engine, the way it should be</dd></div><div><dt>Spot it by</dt><dd>That rear wing</dd></div></dl></figcaption>
+              </figure>
+              <figure class="bay" data-bay="2">
+                <svg viewBox="0 0 420 170" class="art art--tiger" aria-hidden="true">
+                  <ellipse cx="214" cy="152" rx="150" ry="6" class="art__shadow"/>
+                  <path d="M210 118 Q 150 126 108 104" class="art__exhaust"/>
+                  <path d="M190 112 118 120" class="art__frame"/>
+                  <path d="M310 120 282 40" class="art__frame"/>
+                  <circle cx="118" cy="120" r="28" class="art__tyre"/><circle cx="118" cy="120" r="16" class="art__rim"/>
+                  <circle cx="310" cy="120" r="30" class="art__tyre"/><circle cx="310" cy="120" r="17" class="art__rim"/>
+                  <rect x="74" y="68" width="48" height="36" rx="6" class="art__pannier"/>
+                  <path class="art__engine" d="M178 86h68l-10 32h-46z"/>
+                  <path class="art__seat" d="M108 66c22-8 52-8 76-2l-6 10c-26-2-48 0-68 4z"/>
+                  <path class="art__body" d="M172 64c20-14 66-18 100-12l-6 30-90 4z"/>
+                  <path class="art__accent" d="M268 46l24-4 6 22-22 4z"/>
+                  <path class="art__accent" d="M282 68l36 6-22 10z"/>
+                  <path class="art__glass" d="M272 42l14-28 8 4-6 26z"/>
+                  <path d="M262 40l22-6" class="art__frame art__frame--bar"/>
+                </svg>
+                <figcaption><p class="plate__k">Dream bike</p><p class="plate__v">Triumph Tiger</p>
+                  <dl class="plate"><div><dt>Planned route</dt><dd>The Himalayas</dd></div><div><dt>Packing</dt><dd>Panniers, and not much else</dd></div></dl></figcaption>
+              </figure>
+              <figure class="bay" data-bay="3">
+                <svg viewBox="0 0 420 170" class="art art--pearl" aria-hidden="true">
+                  <path class="art__sea" d="M0 140c30-8 60 8 90 0s60-8 90 0 60 8 90 0 60-8 90 0 40 6 60 2v28H0z"/>
+                  <path class="art__hull" d="M70 112h270l-20 30H100z"/>
+                  <path class="art__hull" d="M300 96h50l-10 18h-50zM60 100h50l-6 14H64z"/>
+                  <path d="M130 112V22M200 112V12M270 112V30" class="art__mast"/>
+                  <path class="art__sail" d="M104 34h52c4 14 4 30 0 44h-52c4-14 4-30 0-44z"/>
+                  <path class="art__sail" d="M108 82h44c3 9 3 18 0 26h-44c3-8 3-17 0-26z"/>
+                  <path class="art__sail" d="M170 22h60c4 16 4 34 0 50h-60c4-16 4-34 0-50z"/>
+                  <path class="art__sail" d="M176 76h48c3 10 3 20 0 30h-48c3-10 3-20 0-30z"/>
+                  <path class="art__sail" d="M246 38h48c4 14 4 28 0 40h-48c4-12 4-26 0-40z"/>
+                  <path d="M200 12l18 6-18 5z" class="art__accent"/>
+                  <path d="M80 120h250" class="art__stripe"/>
+                </svg>
+                <figcaption><p class="plate__k">Favourite ship</p><p class="plate__v">The Black Pearl</p>
+                  <dl class="plate"><div><dt>Sails</dt><dd>Black, obviously</dd></div><div><dt>Timetable</dt><dd>None</dd></div></dl></figcaption>
+              </figure>
+            </div>
+            <div class="hangar__nav">
+              <button type="button" class="btn btn--ghost" data-bay-step="-1" aria-label="Previous machine">←</button>
+              <div class="hangar__dots" role="group" aria-label="Choose a machine">
+                <button type="button" data-bay-go="0" aria-pressed="true">777</button><button type="button" data-bay-go="1" aria-pressed="false">911</button><button type="button" data-bay-go="2" aria-pressed="false">Tiger</button><button type="button" data-bay-go="3" aria-pressed="false">Pearl</button>
+              </div>
+              <button type="button" class="btn btn--ghost" data-bay-step="1" aria-label="Next machine">→</button>
+            </div>
+          </div>
+        </article>
+
+        <article id="od-board" class="card od-card">
+          <header><p class="eyebrow">Upcoming departures · the bucket list</p><h3>Departures</h3></header>
+          <div class="fids" role="table" aria-label="Bucket list as a departures board">
+            <div class="fids__row fids__row--head" role="row"><span role="columnheader">Time</span><span role="columnheader">Destination</span><span role="columnheader">Gate</span><span role="columnheader">Status</span></div>
+            <div class="fids__row" role="row"><span class="flap" data-t="SOON" role="cell"></span><span class="flap" data-t="HIMALAYAS BY MOTORBIKE" role="cell"></span><span class="flap" data-t="H1" role="cell"></span><span class="flap fids__st fids__st--go" data-t="ON SCHEDULE" role="cell"></span></div>
+            <div class="fids__row" role="row"><span class="flap" data-t="SOON" role="cell"></span><span class="flap" data-t="HIMALAYAN BASE CAMP TREK" role="cell"></span><span class="flap" data-t="H2" role="cell"></span><span class="flap fids__st fids__st--board" data-t="BOARDING" role="cell"></span></div>
+            <div class="fids__row" role="row"><span class="flap" data-t="WINTER" role="cell"></span><span class="flap" data-t="LEARN SNOWBOARDING" role="cell"></span><span class="flap" data-t="C3" role="cell"></span><span class="flap fids__st fids__st--wait" data-t="AWAITING SNOW" role="cell"></span></div>
+            <div class="fids__row" role="row"><span class="flap" data-t="NEXT" role="cell"></span><span class="flap" data-t="RED DEAD REDEMPTION 2" role="cell"></span><span class="flap" data-t="G2" role="cell"></span><span class="flap fids__st fids__st--board" data-t="CHECK-IN OPEN" role="cell"></span></div>
+          </div>
+          <p class="fids__note">Statuses are hopeful. Got a tip for any of these? <a href="#contact" data-go="contact">Tell me</a>.</p>
+        </article>
+
+        <article id="od-box" class="card od-card">
+          <header><p class="eyebrow">Flight data recorder · handle with care</p><h3>Black box</h3></header>
+          <div class="box">
+            <div class="box__unit" aria-hidden="true">
+              <span class="box__stripe"></span><span class="box__label">FLIGHT RECORDER<br>DO NOT OPEN</span>
+            </div>
+            <div class="box__read">
+              <p class="box__status">Status: <b id="box-status">SEALED</b></p>
+              <p class="box__text" id="box-text" aria-live="polite">One recording on this unit is marked classified.</p>
+              <button type="button" class="btn btn--solid" id="box-open">Decrypt the recording</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+    <div class="ticker" aria-label="Teams and riders I follow">
+      <div class="ticker__track">
+        <span><b>F1</b> Red Bull Racing · Max Verstappen</span><span><b>MotoGP</b> Valentino Rossi</span><span><b>Cricket</b> RCB · India</span><span><b>Football</b> Messi · Barcelona · Man City</span><span><b>Gym</b> running · tennis · pickleball</span>
+        <span aria-hidden="true"><b>F1</b> Red Bull Racing · Max Verstappen</span><span aria-hidden="true"><b>MotoGP</b> Valentino Rossi</span><span aria-hidden="true"><b>Cricket</b> RCB · India</span><span aria-hidden="true"><b>Football</b> Messi · Barcelona · Man City</span><span aria-hidden="true"><b>Gym</b> running · tennis · pickleball</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 CONTACT -->
   <section class="panel contact" id="contact" role="tabpanel" aria-labelledby="t-contact" tabindex="-1" data-rise>
     <div class="ping" aria-hidden="true"><i></i><i></i><i></i></div>
     <p class="eyebrow">Cleared for contact</p>
@@ -514,6 +720,7 @@
     <span class="route__fix" data-fix="projects"><i></i>PROJS</span>
     <span class="route__fix" data-fix="skills"><i></i>SKILL</span>
     <span class="route__fix" data-fix="education"><i></i>EDUCN</span>
+    <span class="route__fix" data-fix="offduty"><i></i>LAYOV</span>
     <span class="route__fix" data-fix="contact"><i></i>CNTCT</span>
   </div>
   <p class="route__leg"><span id="leg">LEG 1 OF 6</span><span class="route__hint">Swipe sideways with two fingers, or use ← →, for the next page</span></p>
@@ -522,6 +729,7 @@
 <script src="sky.js"></script>
 <script src="deck.js"></script>
 <script src="projects.js"></script>
+<script src="offduty.js"></script>
 <!--/BODY-->
 </body>
 </html>
